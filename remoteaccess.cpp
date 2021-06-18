@@ -1,11 +1,15 @@
 #include "remoteaccess.h"
 
-RemoteAccess::RemoteAccess(QObject *parent) : QObject(parent)
+#include <QNetworkAccessManager>
+
+TRemoteAccess::TRemoteAccess(QObject *parent) :
+    QObject(parent),
+    m_NetworkAccess(new QNetworkAccessManager(this))
 {
 
 }
 
-QString RemoteAccess::geNamedQML(const QString &)
+QString TRemoteAccess::geNamedQML(const QString &)
 {
     return "";
 }

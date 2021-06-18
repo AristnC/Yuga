@@ -3,14 +3,19 @@
 
 #include <QObject>
 
-class RemoteAccess : public QObject
+class QNetworkAccessManager;
+
+class TRemoteAccess : public QObject
 {
     Q_OBJECT
 public:
-    explicit RemoteAccess(QObject *parent = nullptr);
+    explicit TRemoteAccess(QObject *parent = nullptr);
     Q_INVOKABLE QString geNamedQML(const QString &);
 
 signals:
+
+private:
+    QNetworkAccessManager * m_NetworkAccess;
 
 };
 
