@@ -8,6 +8,7 @@ class RemoteAccess : public QObject
     Q_OBJECT
 public:
     explicit RemoteAccess(QObject *parent = nullptr);
+    Q_INVOKABLE QString geNamedQML(const QString &);
 
 signals:
 
